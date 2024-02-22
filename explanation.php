@@ -36,7 +36,8 @@
 <br>
 <h3 class="lim">Limitations</h3>
 <p>
-    You cannot have multiple tasks with the same name. This could be fixed by implementing some sort of unique taskID primary key, but that's for a later date. This was just a little programming challenge :).
+    You cannot have multiple tasks with the same name. This could be fixed by implementing some sort of unique taskID primary key, but that's for a later date. This was just a little programming challenge :).<br>
+    Symbols that have use in JS are not allowed in the Task Name (e.g. "'"). Things like "$", "." are, however, fine.
 </p>
 <br>
 <a href="index.php">Back</a>
