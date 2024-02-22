@@ -30,6 +30,8 @@ for ($i = 0; $i < count($raw); $i++) {
 }
 
 ?>
+<br>
+The line number is the primary key for the task.
 </pre>
 <br>
 <a href="../index.php">Back</a>
