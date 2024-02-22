@@ -19,6 +19,8 @@
 
 <body>
 <p>
+<u>This is outdated, but will be updated soon.</u><br><br>
+
     All tasks are stored in a database file called <i>tasks.txt</i>. Each task has it's own line. Each line is formatted as such:<br>
     <pre>   taskName|completionStatus</pre></p><p>
     CompletionStatus is either a 0 or a 1, 0 indicating uncompleted (unchecked) and 1 indicating completed (checked).<br>

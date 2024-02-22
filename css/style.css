@@ -27,3 +27,34 @@ footer {
     background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
 }
+
+.viewCompleted {
+    margin-top: 20;
+}
+
+.m5 {
+    margin-top: 5 !important;
+}
+
+.btnDelete {
+    color: red;
+}
+
+.btnEdit {
+    color: blue;
+}
+
+.btnSave {
+    color: green;
+}
+
+.txtDesc {
+    width: 35%;
+    height: 100px;
+}
+
+.taskTitle {
+    font-size: 25px;
+    font-weight: bold;
+    width: 35%
+}

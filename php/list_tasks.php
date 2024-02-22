@@ -25,12 +25,13 @@ if ($rawData != NULL) {
 
         echo "<script>\n";
         echo "function submitForm" . $i . "() {\n";
-        echo "  window.location.href = '../php/modify_task_status.php?taskName=" . $i  . "';";
+        echo "  window.location.href = '../php/modify_task_status.php?id=" . $i  . "';";
         echo "}\n";
         echo "</script>\n";
 
         echo "<form method='GET'><input type='checkbox' " . $checked . " onclick='submitForm" . $i . "()'>";
-        echo $tasks . " <a href='../php/delete_task.php?taskName=" . $i . "'> (delete)</a></form>";
+        echo "<a class='task' href='../php/view_task.php?id=" . $i . "'>";
+        echo $tasks . "</a> <!--<a href='../php/delete_task.php?id=" . $i . "'> (delete)</a>--></form>";
     }
 }
 

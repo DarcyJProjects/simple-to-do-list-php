@@ -1,7 +1,7 @@
 <?php
 $databaseFile = $_SERVER['DOCUMENT_ROOT'] . "/database/tasks.txt";
 
-$taskName = $_GET['taskName'];
+$taskName = $_GET['id'];
 
 $rawData = file($databaseFile);
 
