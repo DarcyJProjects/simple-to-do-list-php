@@ -9,14 +9,18 @@ if (!file_exists($databaseFile)) {
 
 $rawData = file($databaseFile);
 
+$totalTasks = count($rawData);
+$completedTasks = 0;
+
 if ($rawData != NULL) {
-    for ($i = 0; $i < count($rawData); $i++) {
+    for ($i = 0; $i < $totalTasks; $i++) {
         $tasks = explode("|", $rawData[$i])[0];
         $tasksStatus = explode("|", $rawData[$i])[1];
 
         $checked = "";
         if ($tasksStatus == 1) {
             $checked = "checked";
+            $completedTasks++;
         };
 
         echo "<script>\n";
@@ -29,4 +33,7 @@ if ($rawData != NULL) {
         echo $tasks . " <a href='../php/delete_task.php?taskName=" . $i . "'> (delete)</a></form>";
     }
 }
+
+$completionPercentage = number_format(($completedTasks / $totalTasks) * 100, 2, ".", "");
+echo "<br><b>Completed " . $completedTasks . "/" . $totalTasks . " tasks - " . $completionPercentage . "%</b>"; 
 ?>

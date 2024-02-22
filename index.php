@@ -26,6 +26,9 @@
     <ul>
         <?php include "./php/list_tasks.php"; ?>
     </ul>
+
+<br>
+<a href="/php/view_database.php">View Database</a>
 </body>
 <br><br><br><br>
 
