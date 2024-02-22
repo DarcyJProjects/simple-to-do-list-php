@@ -1,10 +1,15 @@
 html {
-    background-color: white;
-    margin: 20px !important;
+    background-color: rgb(24,24,24);
+    margin: 20 !important;
 }
 
 h1, h2, h3, a, p, ul, form {
     font-family: Arial;
+    color: white;
+}
+
+pre {
+    color: white;
 }
 
 h1 {
@@ -29,8 +34,9 @@ footer {
     position: fixed;
     bottom: 0;
     font-size: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.2);
     width: 100%;
+    color: white;
 }
 
 .viewCompleted {
@@ -149,7 +155,7 @@ footer {
     right: 15;
     top: 15;
     font-family: Arial;
-    color: black;
+    color: white;
 }
 
 input[type="checkbox"], input[type="button"] {

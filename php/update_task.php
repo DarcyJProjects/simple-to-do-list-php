@@ -6,7 +6,7 @@ $taskTitle = $_GET['task'];
 $category = $_GET['cat'];
 $duedate = $_GET['duedate'];
 $description = str_replace("\n", "\\n", $_GET['desc']);
-echo $description;
+$darkmode = $_GET['darkmode'] ?? 'false';
 
 $rawData = file($databaseFile);
 
@@ -25,6 +25,6 @@ if ($rawData != NULL) {
     fclose($taskFile);
 }
 
-header("Location: view_task.php?id=" . $taskName);
+header("Location: view_task.php?id=" . $taskName . "&darkmode=" . $darkmode);
 die();
 ?>

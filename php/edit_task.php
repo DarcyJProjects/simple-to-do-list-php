@@ -5,6 +5,7 @@
 
     $title = $config[0];
     $taskName = $_GET['id'];
+    $darkmode = $_GET['darkmode'] ?? 'false';
 
     $rawData = explode("|", file($databaseFile)[$taskName]);
     $task = $rawData[0];
@@ -21,7 +22,13 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <?php
+    if ($darkmode == "true") {
+        echo '<link rel="stylesheet" href="../css/style_darkmode.css" type="text/css">';
+    } else {
+        echo '<link rel="stylesheet" href="../css/style.css" type="text/css">';
+    }
+    ?>
     <link rel="icon" href="favicon.png">
     <title><?php echo $title; ?> - Viewing Task</title>
 
@@ -41,7 +48,7 @@
         var duedate = document.getElementById("duedate").value;
         var description = document.getElementById("description").value;
 
-        window.location.href = "update_task.php?id=" + id + "&task=" + encodeURIComponent(taskTitle) + "&cat=" + encodeURIComponent(category) + "&duedate=" + encodeURIComponent(duedate) + "&desc=" + encodeURIComponent(description);
+        window.location.href = "update_task.php?id=" + id + "&task=" + encodeURIComponent(taskTitle) + "&cat=" + encodeURIComponent(category) + "&duedate=" + encodeURIComponent(duedate) + "&desc=" + encodeURIComponent(description) + "&darkmode=<?php echo $darkmode; ?>";
     }
 </script>
 
@@ -63,7 +70,7 @@
         <input class="btnSave" type="button" value="Save Changes" onclick="save()">
     </form>
     <br>
-<a href="../index.php">Back (Discards any Changes)</a>
+    <a href="../index.php?darkmode=<?php echo $darkmode; ?>">Back (Discards any changes)</a>
 </body>
 
 <footer>

@@ -1,4 +1,0 @@
-Example Task 1|1|Not Set|dd/mm/yyyy|Not Set|
-Example Task 2|1|Not Set|dd/mm/yyyy|Not Set|
-Example Task 3|0|Not Set|dd/mm/yyyy|Not Set|
-Example Task 4|0|Not Set|dd/mm/yyyy|Not Set|

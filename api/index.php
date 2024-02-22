@@ -1,5 +1,4 @@
 <?php
-header('Content-type: application/json');
 $databaseFile = $_SERVER['DOCUMENT_ROOT'] . "/database/tasks.txt";
 $id = $_GET['id'];
 
@@ -12,5 +11,19 @@ $category = $rawData[4];
 
 $data = array('id' => $id, 'name' => $task, 'completed' => $status, 'description' => $description, 'duedate' => $duedate, 'category' => $category);
 $json_data = json_encode($data, JSON_PRETTY_PRINT);
-echo $json_data;
+
+$tempJSON = "task" . $id . ".json";
+$json_data = str_replace("\/", "/", $json_data);
+file_put_contents($tempJSON, $json_data);
+
+header('Content-Description: File Transfer');
+header('Content-Type: application/octet-stream');
+header('Content-Disposition: attachment; filename="' . basename($tempJSON) . '"');
+header('Expires: 0');
+header('Cache-Control: must-revalidate');
+header('Pragma: public');
+header('Content-Length: ' . filesize($tempJSON));
+readfile($tempJSON);
+unlink($tempJSON);
+die();
 ?>

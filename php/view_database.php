@@ -3,11 +3,18 @@
     $config = file($configFile);
 
     $title = $config[0];
+    $darkmode = $_GET['darkmode'] ?? 'false';
 ?>
 
 <html>
 <head>
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <?php
+    if ($darkmode == "true") {
+        echo '<link rel="stylesheet" href="../css/style_darkmode.css" type="text/css">';
+    } else {
+        echo '<link rel="stylesheet" href="../css/style.css" type="text/css">';
+    }
+    ?>
     <link rel="icon" href="favicon.png">
     <title><?php echo $title; ?> - View Database</title>
 
@@ -33,12 +40,15 @@ for ($i = 0; $i < count($raw); $i++) {
 <br>
 The line number is the primary key for the task.
 </pre>
-<br>
-<a href="../index.php">Back</a>
+<a class="export" href="export_database.php?type=txt">Export TXT</a><br>
+<a class="export" href="export_database.php?type=csv">Export CSV</a>
+<br><br>
+<a href="../index.php?darkmode=<?php echo $darkmode; ?>">Back</a>
 </body>
 
-<footer>
-<p>Copyright © <?php include "../php/copyright.php"; ?> Darcy Johnson.		<br>All Rights Reserved.</p>
-</footer>
+<?php
+$dir4footer = "php";
+include "../php/footer.php";
+?>
 
 </html>

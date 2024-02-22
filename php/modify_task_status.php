@@ -3,6 +3,7 @@ $databaseFile = $_SERVER['DOCUMENT_ROOT'] . "/database/tasks.txt";
 
 $taskName = $_GET['id'];
 $viewing = $_GET['viewing'];
+$darkmode = $_GET['darkmode'] ?? 'false';
 
 $rawData = file($databaseFile);
 
@@ -28,9 +29,9 @@ if ($rawData != NULL) {
 }
 
 if ($viewing != NULL) {
-    header("Location: view_task.php?id=" . $taskName);
+    header("Location: view_task.php?id=" . $taskName . "&darkmode=" . $darkmode);
 } else {
-    header("Location: ../index.php");
+    header("Location: ../index.php" . "?darkmode=" . $darkmode);
 }   
 
 die();

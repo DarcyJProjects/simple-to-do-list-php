@@ -3,11 +3,18 @@
     $config = file($configFile);
 
     $title = $config[0];
+    $darkmode = $_GET['darkmode'] ?? 'false';
 ?>
 
 <html>
 <head>
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <?php
+    if ($darkmode == "true") {
+        echo '<link rel="stylesheet" href="./css/style_darkmode.css" type="text/css">';
+    } else {
+        echo '<link rel="stylesheet" href="./css/style.css" type="text/css">';
+    }
+    ?>
     <link rel="icon" href="favicon.png">
     <title><?php echo $title; ?> - Explanation</title>
 
@@ -46,8 +53,9 @@
 <a href="index.php">Back</a>
 </body>
 
-<footer>
-<p>Copyright © <?php include "./php/copyright.php"; ?> Darcy Johnson.		<br>All Rights Reserved.</p>
-</footer>
+<?php
+$dir4footer = "index";
+include "./php/footer.php";
+?>
 
 </html>

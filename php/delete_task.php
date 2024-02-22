@@ -2,6 +2,7 @@
 $databaseFile = $_SERVER['DOCUMENT_ROOT'] . "/database/tasks.txt";
 
 $taskName = $_GET['id'];
+$darkmode = $_GET['darkmode'] ?? 'false';
 
 $rawData = file($databaseFile);
 
@@ -18,6 +19,6 @@ if ($rawData != NULL) {
     fclose($taskFile);
 }
 
-header("Location: ../index.php");
+header("Location: ../index.php?darkmode=" . $darkmode);
 die();
 ?>
