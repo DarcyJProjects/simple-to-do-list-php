@@ -17,18 +17,16 @@ if ($rawData != NULL) {
         $checked = "";
         if ($tasksStatus == 1) {
             $checked = "checked";
-        }
-
-        $tasksREPLACED = str_replace(" ", "$$$", $tasks);
+        };
 
         echo "<script>\n";
-        echo "function submitForm" . $tasksREPLACED . "() {\n";
-        echo "  window.location.href = '../php/modify_task_status.php?taskName=" . $tasksREPLACED  . "';";
+        echo "function submitForm" . $i . "() {\n";
+        echo "  window.location.href = '../php/modify_task_status.php?taskName=" . $i  . "';";
         echo "}\n";
         echo "</script>\n";
 
-        echo "<form method='GET'><input type='checkbox' " . $checked . " onclick='submitForm" . $tasksREPLACED . "()'>";
-        echo $tasks . " <a href='../php/delete_task.php?taskName=" . $tasksREPLACED . "'> (delete)</a></form>";
+        echo "<form method='GET'><input type='checkbox' " . $checked . " onclick='submitForm" . $i . "()'>";
+        echo $tasks . " <a href='../php/delete_task.php?taskName=" . $i . "'> (delete)</a></form>";
     }
 }
 ?>
