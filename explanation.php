@@ -34,10 +34,11 @@
 
 </p>
 <br>
-<h3 class="lim">Limitations</h3>
+<h3 class="lim">Fixes</h3>
 <p>
-    You cannot have multiple tasks with the same name. This could be fixed by implementing some sort of unique taskID primary key, but that's for a later date. This was just a little programming challenge :).<br>
-    Symbols that have use in JS are not allowed in the Task Name (e.g. "'"). Things like "$", "." are, however, fine.
+    A primary key system has been implemented - and actually made the code simpler!<br>
+    A tasks primary key is just its line number in the database.<br>
+    This fixes the previous limitations including not being able to have two tasks with the same name, and not being able to have symbols in the task name.
 </p>
 <br>
 <a href="index.php">Back</a>
