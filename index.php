@@ -27,6 +27,7 @@
         <?php include "./php/list_tasks.php"; ?>
     </ul>
 </body>
+<br><br><br><br>
 
 <footer>
 <p>Copyright © <?php include "./php/copyright.php"; ?> Darcy Johnson.		<br>All Rights Reserved.</p>
