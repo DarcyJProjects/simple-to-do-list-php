@@ -1,0 +1,4 @@
+Example Task 1|1
+Example Task 2|1
+Example Task 3|0
+Example Task 4|0

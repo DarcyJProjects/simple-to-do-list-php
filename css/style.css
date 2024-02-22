@@ -1,0 +1,27 @@
+h1, h2, h3, a, p, ul, form {
+    font-family: Arial;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin-top: 2;
+    margin-bottom: 25;
+}
+
+.lim {
+    margin-bottom: -10 !important;
+}
+
+ul {
+    font-size: 15px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 15px;
+}
