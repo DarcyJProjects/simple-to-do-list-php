@@ -12,15 +12,15 @@ It doesn't have a bucket load of features so it's simple to use.
 <h2>Screenshots</h2>
 <p>Note: these may not be 100% up to date</p>
 
-<b>Index Page - light mode</b>
+<b>Index Page - light mode</b><br>
 <img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/1.png" style="width: 50%;"><br><br>
-<b>Index Page - dark mode</b>
+<b>Index Page - dark mode</b><br>
 <img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/2.png" style="width: 50%;"><br><br>
-<b>View Task Page - light mode</b>
+<b>View Task Page - light mode</b><br>
 <img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/3.png" style="width: 50%;"><br><br>
-<b>Edit Task Page - light mode</b>
+<b>Edit Task Page - light mode</b><br>
 <img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/4.png" style="width: 50%;"><br><br>
-<b>View Database Page - light mode</b>
+<b>View Database Page - light mode</b><br>
 <img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/5.png" style="width: 50%;"><br>
 
 <p>This is not all the pages - just the main ones</p>
