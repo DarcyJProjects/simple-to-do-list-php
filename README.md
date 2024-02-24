@@ -13,14 +13,14 @@ It doesn't have a bucket load of features so it's simple to use.
 <p>Note: these may not be 100% up to date</p>
 
 <b>Index Page - light mode</b>
-<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/1.png"><br><br>
+<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/1.png" style="width: 50%;"><br><br>
 <b>Index Page - dark mode</b>
-<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/2.png"><br><br>
+<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/2.png" style="width: 50%;"><br><br>
 <b>View Task Page - light mode</b>
-<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/3.png"><br><br>
+<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/3.png" style="width: 50%;"><br><br>
 <b>Edit Task Page - light mode</b>
-<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/4.png"><br><br>
+<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/4.png" style="width: 50%;"><br><br>
 <b>View Database Page - light mode</b>
-<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/5.png"><br>
+<img src="https://screenshots.darcyjprojects.xyz/simple-to-do-list-php/5.png" style="width: 50%;"><br>
 
 <p>This is not all the pages - just the main ones</p>
