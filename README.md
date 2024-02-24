@@ -5,7 +5,7 @@ It doesn't have a bucket load of features so it's simple to use.
 
 <br><br><b>Work Required:</b><br>
 <ul>
-  <p>- Add a way to delete categories</p>
+  <p>- Add a way to edit categories</p>
   <p>- Update the explanation.php page</p>
 </ul><br><br><br>
 
