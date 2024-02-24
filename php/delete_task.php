@@ -16,8 +16,6 @@ if ($rawData != NULL) {
     $tasks = explode("|", $rawData[$taskName])[0];
     unset($rawData[$taskName]);
     $rawData = array_values($rawData);
-
-    print_r($rawData);
     
     $taskFile = fopen($databaseFile, "w");
     foreach ($rawData as $rawLine) {

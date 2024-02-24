@@ -122,6 +122,8 @@
                 ?>
                 </select>
 
+                <input id="btnDeleteCategory" class="btnDelete" type="button" value="  Delete  " onclick="deleteCategory()">
+
                 <b id="newCategoryTxt" ><br><br>Name: <input type="text" id="newCategoryName" oninput="handleText()" value="name" onclick="clearText()"><br></b>
                 <b id="newCategoryTxt1" >Colour: <select id="selectColour" onchange="handleColour()">
                 <?php
@@ -140,6 +142,8 @@
             <script>
                 var selectBox = document.getElementById("category");
                 var colourBox = document.getElementById("selectColour");
+                
+                var btnDelete = document.getElementById("btnDeleteCategory");
 
                 var colourPreview = document.getElementById("colourPreview");
                 
@@ -154,6 +158,8 @@
                 var cat = '<?php echo $category; ?>';
                 if (cat == "Not Set") {
                     selectBox.selectedIndex = selectBox.options.length - 1;
+
+                    btnDelete.style.display = "none";
                 } else {
                     selectBox.selectedIndex = <?php if ($category == "Not Set") { echo '0'; } else { echo $category; } ?>;
 
@@ -164,6 +170,8 @@
                     txt3.style.display = 'none';
                     txt4.style.display = 'none';
                     div1.style.display = 'none';
+
+                    btnDelete.style.display = "";
                 }
 
                 function selectedIndexChange() {
@@ -175,6 +183,8 @@
                         txt3.style.display = '';
                         txt4.style.display = '';
                         div1.style.display = '';
+
+                        btnDelete.style.display = "none";
                     } else {
                         b1.style.display = 'none';
                         b2.style.display = 'none';
@@ -183,6 +193,8 @@
                         txt3.style.display = 'none';
                         txt4.style.display = 'none';
                         div1.style.display = 'none';
+
+                        btnDelete.style.display = "";
                     }
                 }
 
@@ -217,9 +229,36 @@
                     });
                 }
 
+                function deleteCategory() {
+                    var category = document.getElementById("category");
+                    var url = "<?php 
+                    echo (empty($_SERVER['HTTPS']) ? 'http' : 'https') . "://$_SERVER[HTTP_HOST]" . "/php/delete_category.php?cat=";
+                    ?>"
+                     + category.selectedIndex.toString() + "&id=" + <?php echo $taskName; ?>;
+                    
+                    window.open(url);
+
+                    category.remove(category.selectedIndex);
+                    category.selectedIndex = category.length - 1;
+
+                    selectedIndexChange();
+                }
+
 
             $colour = colourBox.value;
             colourPreview.style.backgroundColor = $colour;
+
+            if ((selectBox.options[selectBox.selectedIndex].text) == "+ New") {
+                b1.style.display = '';
+                b2.style.display = '';
+                txt1.style.display = '';
+                txt2.style.display = '';
+                txt3.style.display = '';
+                txt4.style.display = '';
+                div1.style.display = '';
+
+                btnDelete.style.display = 'none';
+            }
             </script>
                 
         </div><br>
