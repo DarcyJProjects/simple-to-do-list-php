@@ -162,6 +162,10 @@ input[type="button"] {
     border-radius: 20px;
 }
 
+.txtAddTask {
+    width: 300px;
+}
+
 footer {
     position: fixed;
     left: 0;
