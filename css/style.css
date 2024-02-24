@@ -3,7 +3,7 @@ html {
     margin: 20px !important;
 }
 
-h1, h2, h3, a, p, ul, form {
+h1, h2, h3, a, p, ul, form, .font, .formarea {
     font-family: Arial;
 }
 
@@ -25,14 +25,6 @@ ul {
     font-size: 15px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    font-size: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-}
-
 .viewCompleted {
     margin-top: 20;
 }
@@ -49,7 +41,7 @@ footer {
     color: blue;
 }
 
-.btnSave {
+.btnSave, .btnArchive {
     color: green;
 }
 
@@ -72,9 +64,7 @@ footer {
 
     display: inline-block;
 
-    color: black;
-    background-color: aqua;
-    
+    color: black;   
 }
 
 .catUrgent {
@@ -88,7 +78,14 @@ footer {
     display: inline-block;
 
     color: white;
-    background-color: red; 
+    background-color: red;
+    border: 2px solid rgb(153, 0, 0);
+}
+
+.catUrgentFlash {
+    color: white !important;
+    background-color: orange !important;
+    border: 2px solid rgb(153, 0, 0);
 }
 
 .catGood {
@@ -101,6 +98,7 @@ footer {
 
     color: black;
     background-color: greenyellow;
+    border: 2px solid rgb(104, 153, 28);
 }
 
 .catNegative {
@@ -113,6 +111,7 @@ footer {
 
     color: white;
     background-color: purple;
+    border: 2px solid rgb(77, 0, 77);
 }
 
 .export {
@@ -146,12 +145,60 @@ footer {
 .darkmodeToggle {
     margin: 15;
     position: fixed;
-    right: 15;
-    top: 15;
+    right: 40;
+    top: 50;
     font-family: Arial;
     color: black;
 }
 
-input[type="checkbox"], input[type="button"] {
+input[type="button"] {
+    cursor: pointer;
+}
+
+.boxed {
+    margin-bottom: 10px;
+    background-color: rgb(235, 235, 235);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 45%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    top: 25%;
+    padding: 5px;
+    left: 27.5%;
+    border: 2px solid crimson;
+}
+
+.modalContent {
+    color: black;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.errorDiv {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    accent-color: rgba(0, 204, 82, 0.849) !important;
     cursor: pointer;
 }

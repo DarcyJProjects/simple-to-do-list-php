@@ -1,9 +1,9 @@
 html {
     background-color: rgb(24,24,24);
-    margin: 20 !important;
+    margin: 20;
 }
 
-h1, h2, h3, a, p, ul, form {
+h1, h2, h3, a, p, ul, form, .formarea {
     font-family: Arial;
     color: white;
 }
@@ -30,15 +30,6 @@ ul {
     font-size: 15px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    font-size: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 100%;
-    color: white;
-}
-
 .viewCompleted {
     margin-top: 20;
 }
@@ -55,7 +46,7 @@ footer {
     color: blue;
 }
 
-.btnSave {
+.btnSave, .btnArchive {
     color: green;
 }
 
@@ -78,9 +69,7 @@ footer {
 
     display: inline-block;
 
-    color: black;
-    background-color: aqua;
-    
+    color: black;    
 }
 
 .catUrgent {
@@ -94,7 +83,14 @@ footer {
     display: inline-block;
 
     color: white;
-    background-color: red; 
+    background-color: red;
+    border: 2px solid rgb(153, 0, 0);
+}
+
+.catUrgentFlash {
+    color: white !important;
+    background-color: orange !important;
+    border: 2px solid rgb(153, 0, 0);
 }
 
 .catGood {
@@ -106,7 +102,8 @@ footer {
     display: inline-block;
 
     color: black;
-    background-color: greenyellow;
+    background-color: rgb(173, 255, 47);
+    border: 2px solid rgb(104, 153, 28);
 }
 
 .catNegative {
@@ -118,7 +115,8 @@ footer {
     display: inline-block;
 
     color: white;
-    background-color: purple;
+    background-color: rgb(128, 0, 128);
+    border: 2px solid rgb(77, 0, 77);
 }
 
 .export {
@@ -152,12 +150,68 @@ footer {
 .darkmodeToggle {
     margin: 15;
     position: fixed;
-    right: 15;
-    top: 15;
+    right: 40;
+    top: 50;
     font-family: Arial;
     color: white;
 }
 
 input[type="checkbox"], input[type="button"] {
     cursor: pointer;
+}
+
+.boxed {
+    margin-bottom: 10px;
+    background-color: rgb(35, 35, 35);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.txtAddTask {
+    width: 300px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 15px;
+    background-color: rgba(85, 85, 85, 0.2);
+    width: 100%;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 45%;
+    height: auto;
+    background: rgba(85, 85, 85, 0.95);
+    border-radius: 20px;
+    top: 25%;
+    padding: 5px;
+    left: 27.5%;
+    border: 2px solid crimson;
+}
+
+.modalContent {
+    color: white;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.errorDiv {
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    accent-color: rgba(0, 204, 82, 0.849) !important;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }

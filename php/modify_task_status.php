@@ -1,9 +1,14 @@
 <?php
 $databaseFile = $_SERVER['DOCUMENT_ROOT'] . "/database/tasks.txt";
+$configFile = $_SERVER['DOCUMENT_ROOT'] . "/database/config.txt";
+$config = file($configFile);
 
 $taskName = $_GET['id'];
 $viewing = $_GET['viewing'];
 $darkmode = $_GET['darkmode'] ?? 'false';
+
+$timezone = $config[1];
+date_default_timezone_set($timezone);
 
 $rawData = file($databaseFile);
 
@@ -13,11 +18,14 @@ if ($rawData != NULL) {
     $description = explode("|", $rawData[$taskName])[2];
     $duedate = explode("|", $rawData[$taskName])[3];
     $category = explode("|", $rawData[$taskName])[4];
+    $created = explode("|", $rawData[$taskName])[5];
+    $lastModified = date("d/m/Y h:i a");
+
 
     if ($tasksStatus == "0") {
-        $rawData[$taskName] = $tasks . "|1|" . $description . "|" . $duedate . "|" . $category . "|\n";
+        $rawData[$taskName] = $tasks . "|1|" . $description . "|" . $duedate . "|" . $category . "|" . $created . "|" . $lastModified . "|\n";
     } else {
-        $rawData[$taskName] = $tasks . "|0|" . $description . "|" . $duedate . "|" . $category . "|\n";
+        $rawData[$taskName] = $tasks . "|0|" . $description . "|" . $duedate . "|" . $category . "|" . $created . "|" . $lastModified . "|\n";
     }
 
     $taskFile = fopen($databaseFile, "w");
